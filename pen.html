@@ -1,0 +1,28 @@
+<html>
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <textarea class="form-control" id="html"></textarea>
+                </div>
+                <div class="col-md-6">
+                    <iframe id="iframe-result"></iframe>
+                </div>
+                <div id="x"></div>
+            </div>
+        </div>
+        <script src="jquery.js"></script>
+        <script>
+            $("#html").keypress(function(){
+                n = $("#html").val();
+                $("#iframe-result").contents().find('html').html(n);
+            });
+        </script>
+    </body>
+</html>
